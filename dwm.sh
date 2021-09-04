@@ -5,7 +5,7 @@ sudo hwclock --systohc
 sudo reflector -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install packages
-sudo pacman -S --noconfirm xorg-server libx11 libxft xorg-xinit polkit-gnome feh lxappearance pcmanfm rust
+sudo pacman -S --noconfirm xorg-server libx11 libxft xorg-xinit polkit-gnome feh lxappearance pcmanfm neovim
 
 # Install fonts
 sudo pacman -S --noconfirm cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting
