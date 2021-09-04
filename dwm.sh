@@ -14,8 +14,10 @@ cd /tmp
 git clone https://aur.archlinux.org/paru.git
 cd paru/;makepkg -si --noconfirm;cd
 
+mkdir -p /home/samer/Code/personal
+
 # Pull Git repositories and install
-cd /tmp
+cd /home/samer/Code/personal
 repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
@@ -23,7 +25,6 @@ do
     cd $repo;make;sudo make install;cd
 done
 
-mkdir -p /home/samer/Code/personal
 cd /home/samer/Code/personal
 git clone https://github.com/samiramer/dot-files.git
 cd dot-files;./install.sh
