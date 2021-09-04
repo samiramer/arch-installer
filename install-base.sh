@@ -31,4 +31,4 @@ echo samer:password | chpasswd
 echo "samer ALL=(ALL) ALL" >> /etc/sudoers.d/samer
 
 
-printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
+printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m\n"

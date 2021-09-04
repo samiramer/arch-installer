@@ -12,19 +12,18 @@ sudo pacman -S --noconfirm cbatticon network-manager-applet zsh-autosuggestions 
 
 cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git/;makepkg -si --noconfirm;cd
+cd yay-git/;makepkg -si --noconfirm
 
 yay -S nerd-fonts-hack xss-lock betterlockscreen
 
 mkdir -p /home/samer/Code/personal
 
 # Pull Git repositories and install
-cd /home/samer/Code/personal
 repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
     git clone https://github.com/samiramer/$repo.git
-    cd $repo;make;sudo make install;cd
+    cd $HOME/Code/personal/$repo;make;sudo make install;cd $HOME/Code/personal
 done
 
 cd /home/samer/Code/personal
