@@ -13,7 +13,7 @@
 / -> size = type = 8304 - Linux x86-64 root (/)
 /home -> type = 8302 - Linux /home
 ```
-7. Once partitioned, run `lsblk` to see the partitions
+7. Once partitioned, run `lsblk` to see the partitions and format them accordingly
 ```
 mkfs.fat -F32 /dev/[efi_partition]
 mkfs.ext4 /dev/[root_partition]
@@ -41,6 +41,6 @@ genfstab -U /mnt > /mnt/etc/fstab
 14. Once finished, exit chroot - `exit`
 15. Unmount all drives and reboot - `umount -a; reboot now`. The system will reboot and boot into the new system
 16. Login, you will get a zsh welcome prompt, press 'q' to "quit and do nothing"
-17. Run the dwm install script - `cd /arch-installer; ./install-dwm.sh`
+17. Run the dwm install script, the sudo password is "password" (change the user password later!) - `cd /arch-installer; ./install-dwm.sh`
 18. Reboot again - `sudo reboot now`
 19. Login and enjoy!
