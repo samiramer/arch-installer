@@ -25,7 +25,7 @@ systemctl enable tlp
 systemctl enable fstrim.timer
 systemctl enable acpid
 
-useradd -m samer
+useradd -m -s /usr/bin/zsh samer
 echo samer:password | chpasswd
 usermod -aG samer
 
