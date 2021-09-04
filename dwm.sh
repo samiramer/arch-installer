@@ -9,10 +9,10 @@ git clone https://aur.archlinux.org/paru.git
 cd paru/;makepkg -si --noconfirm;cd
 
 # Install packages
-sudo pacman -S xorg polkit-gnome feh lxappearance thunar
+sudo pacman -S xorg polkit-gnome feh lxappearance pcmanfm
 
 # Install fonts
-sudo pacman -S --noconfirm nerd-fonts-hack
+sudo pacman -S --noconfirm nerd-fonts-hack cbatticon network-manager-applet
 
 # Pull Git repositories and install
 cd /tmp
