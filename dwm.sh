@@ -8,11 +8,13 @@ sudo reflector -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -S --noconfirm xorg-server libx11 libxft xorg-xinit polkit-gnome feh lxappearance pcmanfm rust
 
 # Install fonts
-sudo pacman -S --noconfirm nerd-fonts-hack cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting
+sudo pacman -S --noconfirm cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting
 
 cd /tmp
 git clone https://aur.archlinux.org/paru.git
 cd paru/;makepkg -si --noconfirm;cd
+
+paru -S nerd-fonts-hack
 
 mkdir -p /home/samer/Code/personal
 
