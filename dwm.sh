@@ -14,7 +14,7 @@ cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm;cd
 
-yay -S nerd-fonts-hack
+yay -S nerd-fonts-hack xss-lock betterlockscreen
 
 mkdir -p /home/samer/Code/personal
 
