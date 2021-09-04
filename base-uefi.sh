@@ -27,7 +27,7 @@ systemctl enable acpid
 
 useradd -m samer
 echo samer:password | chpasswd
-usermod -aG libvirt samer
+usermod -aG samer
 
 echo "samer ALL=(ALL) ALL" >> /etc/sudoers.d/samer
 
