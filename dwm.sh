@@ -2,7 +2,7 @@
 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
-sudo reflector -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install packages
 sudo pacman -S --noconfirm xorg-server libx11 libxft xorg-xinit polkit-gnome feh lxappearance pcmanfm neovim
