@@ -28,7 +28,7 @@ cd /home/samer/Code/personal
 git clone https://github.com/samiramer/dot-files.git
 cd dot-files;./install.sh
 
-sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --verbose --yes --bin-dir $HOME/.local/bin
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
 
