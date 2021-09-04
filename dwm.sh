@@ -11,10 +11,10 @@ sudo pacman -S --noconfirm xorg-server libx11 libxft xorg-xinit polkit-gnome feh
 sudo pacman -S --noconfirm cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting
 
 cd /tmp
-git clone https://aur.archlinux.org/paru.git
-cd paru/;makepkg -si --noconfirm;cd
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git/;makepkg -si --noconfirm;cd
 
-paru -S nerd-fonts-hack
+yay -S nerd-fonts-hack
 
 mkdir -p /home/samer/Code/personal
 
