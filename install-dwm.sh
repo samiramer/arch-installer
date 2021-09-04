@@ -32,7 +32,7 @@ cd dot-files;./install.sh
 
 betterlockscreen -u $HOME/.config/wall.jpg
 
-sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --verbose --yes --bin-dir $HOME/.local/bin
+sh -c "$(curl -vfsSL https://starship.rs/install.sh)" -- --verbose --yes --bin-dir $HOME/.local/bin
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
 
