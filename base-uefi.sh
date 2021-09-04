@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Inspired by EF Linux youtube channel!
-# https://gitlab.com/eflinux/arch-basic
-
 ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
