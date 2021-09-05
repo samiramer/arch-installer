@@ -13,8 +13,8 @@ cd yay-git/;makepkg -si --noconfirm
 
 yay -S nerd-fonts-hack xss-lock betterlockscreen
 
-mkdir -p $HOME/code/personal
-mkdir -p $HOME/{documents,downloads}
+mkdir -p $HOME/media/code/personal
+mkdir -p $HOME/media/{documents,downloads}
 
 # Pull Git repositories and install
 repos=( "dmenu" "dwm" "st" )
