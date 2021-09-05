@@ -13,17 +13,17 @@ cd yay-git/;makepkg -si --noconfirm
 
 yay -S nerd-fonts-hack xss-lock betterlockscreen
 
-mkdir -p /home/samer/Code/personal
+mkdir -p /home/samer/code/personal
 
 # Pull Git repositories and install
 repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
     git clone https://github.com/samiramer/$repo.git
-    cd $HOME/Code/personal/$repo;make;sudo make install;cd $HOME/Code/personal
+    cd $HOME/code/personal/$repo;make;sudo make install;cd $HOME/code/personal
 done
 
-cd /home/samer/Code/personal
+cd /home/samer/code/personal
 git clone https://github.com/samiramer/dot-files.git
 cd dot-files;./install.sh
 
