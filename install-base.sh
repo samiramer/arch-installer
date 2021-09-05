@@ -30,5 +30,7 @@ echo samer:password | chpasswd
 
 echo "samer ALL=(ALL) ALL" >> /etc/sudoers.d/samer
 
+chown -R samer:samer /home/samer
+
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m\n"
