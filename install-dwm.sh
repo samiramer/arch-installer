@@ -22,10 +22,10 @@ repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
     git clone https://github.com/samiramer/$repo.git
-    cd $HOME/code/personal/$repo;make;sudo make install;cd $HOME/code/personal
+    cd $HOME/media/code/personal/$repo;make;sudo make install;cd $HOME/media/code/personal
 done
 
-cd /home/samer/code/personal
+cd /home/samer/media/code/personal
 git clone https://github.com/samiramer/dot-files.git
 cd dot-files;./install.sh
 
