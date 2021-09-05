@@ -17,6 +17,7 @@ mkdir -p $HOME/media/code/personal
 mkdir -p $HOME/media/{documents,downloads}
 
 # Pull Git repositories and install
+cd $HOME/media/code/personal
 repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
