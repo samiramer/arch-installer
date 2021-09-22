@@ -5,7 +5,7 @@ sudo hwclock --systohc
 sudo reflector --verbose -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install packages
-sudo pacman -Sy --noconfirm xorg-server libx11 libxft xorg-xinit xorg-xset xorg-xbacklight xorg-xsetroot gnome-keyring polkit-gnome feh lxappearance pcmanfm neovim tmux npm nodejs cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting openfortivpn dunst pavucontrol flameshot alacritty
+sudo pacman -Sy --noconfirm xorg-server libx11 libxft xorg-xinit xorg-xset xorg-xbacklight xorg-xsetroot gnome-keyring polkit-gnome feh lxappearance pcmanfm neovim tmux npm nodejs cbatticon network-manager-applet zsh-autosuggestions zsh-syntax-highlighting openfortivpn dunst pavucontrol flameshot alacritty redshift
 
 cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
