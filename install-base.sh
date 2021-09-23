@@ -11,7 +11,7 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 cell.localdomain cell" >> /etc/hosts
 echo root:password | chpasswd
 
-pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh dialog wpa_supplicant mtools dosfstools reflector rsync base-devel linux-headers avahi inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh reflector acpi acpi_call tlp bridge-utils acpid terminus-font
+pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh dialog wpa_supplicant mtools dosfstools reflector rsync base-devel linux-headers avahi inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh reflector acpi acpi_call tlp bridge-utils acpid terminus-font wget
 
 pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings
 
