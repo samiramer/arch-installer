@@ -13,10 +13,13 @@ echo root:password | chpasswd
 
 pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh dialog wpa_supplicant mtools dosfstools reflector rsync base-devel linux-headers avahi inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh reflector acpi acpi_call tlp bridge-utils acpid terminus-font wget
 
-#pacman -Sy --noconfirm nvidia
+pacman -Sy --noconfirm nvidia
 
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+
+cp 80-nvidia-pm.rules /etc/udev/rules.d/80-nvidia-pm.rules
+cp nvidia-pm.conf /etc/modprobe.d/nvidia-pm.conf
 
 systemctl enable NetworkManager
 systemctl enable bluetooth
@@ -24,6 +27,7 @@ systemctl enable sshd
 systemctl enable tlp
 systemctl enable fstrim.timer
 systemctl enable acpid
+systemctl enable nvidia-persistenced
 
 useradd -m -s /usr/bin/zsh samer
 echo samer:password | chpasswd
