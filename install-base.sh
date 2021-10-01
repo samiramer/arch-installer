@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 hwclock --systohc
-sed -i '177s/.//' /etc/locale.gen
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "cell" >> /etc/hostname
@@ -11,7 +11,7 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 cell.localdomain cell" >> /etc/hosts
 echo root:password | chpasswd
 
-pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh dialog wpa_supplicant mtools dosfstools reflector rsync base-devel linux-headers avahi inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh reflector acpi acpi_call tlp bridge-utils acpid terminus-font wget
+pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh dialog wpa_supplicant mtools dosfstools reflector rsync base-devel linux-headers avahi inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh reflector acpi acpi_call tlp bridge-utils acpid terminus-font wget htop powertop man-db man-pages texinfo
 
 pacman -Sy --noconfirm nvidia
 
@@ -20,6 +20,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 cp 80-nvidia-pm.rules /etc/udev/rules.d/80-nvidia-pm.rules
 cp nvidia-pm.conf /etc/modprobe.d/nvidia-pm.conf
+sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
 
 systemctl enable NetworkManager
 systemctl enable bluetooth
