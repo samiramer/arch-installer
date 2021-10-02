@@ -11,7 +11,7 @@ cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 
-yay -S noto-fonts nerd-fonts-hack xss-lock betterlockscreen xclip gruvbox-dark-gtk-theme papirus-paleorange-icon-theme
+yay -S noto-fonts nerd-fonts-noto xss-lock betterlockscreen xclip
 
 mkdir -p $HOME/media/code/personal
 mkdir -p $HOME/media/{documents,downloads}
