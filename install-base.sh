@@ -28,6 +28,7 @@ systemctl enable sshd
 systemctl enable tlp
 systemctl enable fstrim.timer
 systemctl enable acpid
+systemctl enable thermald
 #systemctl enable nvidia-persistenced
 
 useradd -m -s /usr/bin/zsh samer
