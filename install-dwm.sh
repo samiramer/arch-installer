@@ -11,7 +11,7 @@ cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 
-yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin
+yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin gruvbox-dark-gtk 
 
 mkdir -p $HOME/code/personal
 sleep 3
