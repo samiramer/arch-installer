@@ -20,6 +20,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 cp 80-nvidia-pm.rules /etc/udev/rules.d/80-nvidia-pm.rules
 cp nvidia-pm.conf /etc/modprobe.d/nvidia-pm.conf
+cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
 
 systemctl enable NetworkManager
