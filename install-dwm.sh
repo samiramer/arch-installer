@@ -11,7 +11,7 @@ cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 
-yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin gruvbox-dark-gtk 
+yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin
 
 mkdir -p $HOME/code/personal
 sleep 3
@@ -34,7 +34,7 @@ git clone https://github.com/samiramer/dot-files.git
 cd dot-files;./install.sh
 sleep 3
 
-betterlockscreen -u $HOME/.config/wall.jpg
+betterlockscreen -u $HOME/.config/wall.png
 
 sleep 3
 
