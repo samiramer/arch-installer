@@ -12,7 +12,7 @@ git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 sleep 2
 
-yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin gruvbox-dark-icons-gtk
+yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin arc-gtk-theme arc-icon-theme
 sleep 2
 
 mkdir -p $HOME/code/personal
