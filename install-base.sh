@@ -20,6 +20,7 @@ echo "GRUB_DISABLE_OS_PROBER=false" > /etc/default/grub
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+cp bluetooth-resume.service /etc/systemd/system/bluetooth-resume.service
 cp 80-nvidia-pm.rules /etc/udev/rules.d/80-nvidia-pm.rules
 cp nvidia-pm.conf /etc/modprobe.d/nvidia-pm.conf
 cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf

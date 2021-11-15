@@ -5,14 +5,14 @@ sudo hwclock --systohc
 sudo reflector --verbose -c Canada -a 4 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install packages
-sudo pacman -Sy --noconfirm xorg-server libx11 libxft xorg-xinit xorg-xset xorg-xrandr xorg-xsetroot feh lxappearance pcmanfm neovim tmux npm nodejs cbatticon network-manager-applet dunst pavucontrol flameshot alacritty redshift picom arandr autorandr pamixer brightnessctl gnupg pass openfortivpn fuse2
+sudo pacman -Sy --noconfirm xorg-server libx11 libxft xorg-xinit xorg-xset xorg-xrandr xorg-xsetroot feh lxappearance pcmanfm neovim tmux npm nodejs cbatticon network-manager-applet dunst pavucontrol flameshot alacritty redshift picom arandr autorandr pamixer brightnessctl gnupg pass openfortivpn fuse2 bspwm sxhkd xdotool
 
 cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 sleep 2
 
-yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin arc-gtk-theme arc-icon-theme i3-gaps i3blocks
+yay -S noto-fonts nerd-fonts-source-code-pro xss-lock betterlockscreen xclip brave-bin arc-gtk-theme arc-icon-theme i3-gaps i3blocks pomo
 sleep 2
 
 mkdir -p $HOME/code/personal
