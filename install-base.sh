@@ -11,19 +11,16 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 cell.localdomain cell" >> /etc/hosts
 echo root:password | chpasswd
 
-pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh wpa_supplicant reflector rsync base-devel linux-headers inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh acpi acpi_call tlp thermald acpid terminus-font wget htop powertop man-db man-pages texinfo intel-media-driver libva-utils vdpauinfo libva-vdpau-driver ttf-ubuntu-font-family intel-gpu-tools os-prober
-
-pacman -Sy --noconfirm nvidia
+pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet zsh wpa_supplicant reflector rsync base-devel linux-headers inetutils dnsutils bluez bluez-utils alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack openssh acpi acpi_call tlp thermald acpid terminus-font wget curl htop powertop man-db man-pages texinfo os-prober wireguard-tools mkcert fzf ripgrep openvpn networkmanager-openvpn docker
 
 echo "GRUB_DISABLE_OS_PROBER=false" > /etc/default/grub
+echo 'GRUB_CMDLINE_LINUX_DEFAULT="usbcore.autosuspend=-1"' >> /etc/default/grub
+echo "GRUB_TIMEOUT=3" >> /etc/default/grub
 
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
 cp bluetooth-resume.service /etc/systemd/system/bluetooth-resume.service
-cp 80-nvidia-pm.rules /etc/udev/rules.d/80-nvidia-pm.rules
-cp nvidia-pm.conf /etc/modprobe.d/nvidia-pm.conf
-cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 sed -i 's/#AutoEnable=false/AutoEnable=true/g' /etc/bluetooth/main.conf
 
 systemctl enable NetworkManager
@@ -33,7 +30,7 @@ systemctl enable tlp
 systemctl enable fstrim.timer
 systemctl enable acpid
 systemctl enable thermald
-#systemctl enable nvidia-persistenced
+systemctl enable docker
 
 useradd -m -s /usr/bin/zsh samer
 echo samer:password | chpasswd
@@ -41,6 +38,7 @@ echo samer:password | chpasswd
 echo "samer ALL=(ALL) ALL" >> /etc/sudoers.d/samer
 
 chown -R samer:samer /home/samer
+usermod -aG docker samer
 
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m\n"
