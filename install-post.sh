@@ -14,7 +14,7 @@ repos=( "dmenu" "dwm" "dwmblocks" )
 for repo in ${repos[@]}
 do
     git clone https://github.com/samiramer/$repo.git
-    cd /files/code/personal/$repo;make;sudo make clean install;cd $PERSONALDIR
+    cd /files/code/personal/$repo;make;sudo make clean install;cd /files/code/personal
     sleep 1
 done
 
