@@ -13,7 +13,7 @@ fzf
 gnome-keyring
 gnome-themes-extra
 gnupg
-grub 
+grub
 i3lock
 imagemagick
 lazygit

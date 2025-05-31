@@ -1,0 +1,5 @@
+1password
+google-chrome
+picom-ftlabs-git
+ttf-adwaita-mono-nerd
+xautolock

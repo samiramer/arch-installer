@@ -13,7 +13,7 @@ echo "127.0.1.1 mini.localdomain mini" >> /etc/hosts
 echo root:password | chpasswd
 
 # install required packages
-pacman -Sy --noconfirm - < packages.txt
+pacman -Syu --noconfirm - < packages.txt
     
 # install local root CA
 mkcert -install
@@ -25,12 +25,7 @@ cd yay-git/;makepkg -si --noconfirm
 sleep 2
 
 # install extra packages
-yay -Sy --noconfirm \
-    1password \
-    google-chrome \
-    picom-ftlabs-git \
-    ttf-adwaita-mono-nerd \
-    xautolock
+yay -Syu --noconfirm - < aur-packages.txt
 
 # setup grub
 echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
