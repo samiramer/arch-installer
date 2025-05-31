@@ -25,7 +25,7 @@ stow -t /home/samer alacritty fontconfig gitconfig scripts tmux ssh xinit zsh
 
 # install Neovim config
 git clone https://github.com/samiramer/neovim-config /files/code/personal/neovim-config
-ln -s /files/code/personal/neovim-config /home/samer
+ln -s /files/code/personal/neovim-config /home/samer/.config/nvim
 
 # install tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm /home/samer/.tmux/plugins/tpm
