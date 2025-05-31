@@ -22,10 +22,6 @@ mkcert -install
 cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
-sleep 2
-
-# install extra packages
-yay -Syu --noconfirm - < aur-packages.txt
 
 # setup grub
 echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub

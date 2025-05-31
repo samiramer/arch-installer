@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# install extra packages
+yay -Syu --noconfirm - < /tmp/arch-installer/aur-packages.txt
+
 cd $CODEDIR
 repos=( "dmenu" "dwm" "dwmblocks" )
 for repo in ${repos[@]}
