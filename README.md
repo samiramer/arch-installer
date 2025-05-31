@@ -38,8 +38,10 @@ pacstrap /mnt base linux linux-firmware git amd-ucode
 genfstab -U /mnt > /mnt/etc/fstab
 ```
 11. Chroot into the /mnt folder - `arch-chroot /mnt`
-12. Clone the arch-installer repo - `cd /; git clone https://github.com/samiramer/arch-installer`
-13. Run the install.sh script - `cd /arch-installer; ./install.sh`
+12. Clone the arch-installer repo - `cd /tmp; git clone https://github.com/samiramer/arch-installer`
+13. Run the install.sh script - `cd /tmp/arch-installer; ./install.sh`
 14. Once finished, exit chroot - `exit`
 15. Unmount all drives and reboot - `umount -a; reboot now`. The system will reboot and boot into the new system
-16. Login and enjoy
+16. Login with `samer`
+17. Run the post install script `cd /tmp/arch-installer; ./install-post.sh`
+18. Login and enjoy
