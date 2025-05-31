@@ -45,11 +45,15 @@ pacman -Sy --noconfirm \
     networkmanager \
     networkmanager-openvpn \
     network-manager-applet \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
     openssh \
     openvpn \
     os-prober \
     pamixer \
     pass \
+    pasystray \
     pavucontrol \
     pcmanfm \
     pipewire \
@@ -89,6 +93,8 @@ sleep 2
 
 # install extra packages
 yay -Sy --noconfirm \
+    1password \
+    google-chrome \
     picom-ftlabs-git \
     ttf-adwaita-mono-nerd \
     xautolock
