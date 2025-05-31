@@ -13,74 +13,7 @@ echo "127.0.1.1 mini.localdomain mini" >> /etc/hosts
 echo root:password | chpasswd
 
 # install required packages
-pacman -Sy --noconfirm \
-    alacritty \
-    base-devel \
-    blueman \
-    bluez \
-    bluez-utils \ 
-    curl \
-    docker \
-    dunst \
-    efibootmgr \
-    feh \
-    flameshot \
-    fzf \
-    gnome-keyring \
-    gnome-themes-extra \
-    gnupg \
-    grub  \
-    i3lock \
-    imagemagick \
-    lazygit \
-    libnotify \
-    libsecret \
-    libx11 \
-    libxft \
-    lxappearance \
-    man-db \
-    man-pages \
-    mkcert \
-    neovim \
-    networkmanager \
-    networkmanager-openvpn \
-    network-manager-applet \
-    noto-fonts \
-    noto-fonts-cjk \
-    noto-fonts-emoji \
-    openssh \
-    openvpn \
-    os-prober \
-    pamixer \
-    pass \
-    pasystray \
-    pavucontrol \
-    pcmanfm \
-    pipewire \
-    pipewire-alsa \
-    pipewire-pulse \
-    polkit \
-    polkit-gnome \
-    ripgrep \
-    seahorse \
-    secret-tool \
-    sshd \
-    stow \
-    sudo \
-    texinfo \
-    tmux \
-    wget \
-    xautolock \
-    xdg-user-dirs \
-    xclip \
-    xdotool \
-    xorg \
-    xorg-xinit \
-    xsel \
-    xss-lock \
-    zip \
-    zsh \
-    unzip
+pacman -Sy --noconfirm - < packages.txt
     
 # install local root CA
 mkcert -install
