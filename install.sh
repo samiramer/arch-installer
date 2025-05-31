@@ -39,7 +39,5 @@ chown -R samer:samer /home/samer
 echo "samer ALL=(ALL) ALL" >> /etc/sudoers.d/samer
 
 
-# prep the code folder
-$CODEDIR="/files/code/personal"
-mkdir -p $CODEDIR
+# prep the /files folder
 chown -R samer:samer /files
