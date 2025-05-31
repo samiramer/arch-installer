@@ -47,14 +47,11 @@ polkit
 polkit-gnome
 ripgrep
 seahorse
-secret-tool
-sshd
 stow
 sudo
 texinfo
 tmux
 wget
-xautolock
 xdg-user-dirs
 xclip
 xdotool
