@@ -3,6 +3,7 @@ base-devel
 blueman
 bluez
 bluez-utils
+composer
 curl
 docker
 dunst
