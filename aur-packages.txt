@@ -1,4 +1,3 @@
-1password
 ddev
 google-chrome
 picom-ftlabs-git
