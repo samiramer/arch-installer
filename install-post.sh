@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# install yay
+cd /tmp
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git/;makepkg -si --noconfirm
+
 # install extra packages
 yay -Syu --noconfirm - < /tmp/arch-installer/aur-packages.txt
 
