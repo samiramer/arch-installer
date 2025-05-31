@@ -5,6 +5,9 @@ cd /tmp
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/;makepkg -si --noconfirm
 
+# import 1password's signing key, required for yay install to work
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --import
+
 # install extra packages
 yay -Syu --noconfirm - < /tmp/arch-installer/aur-packages.txt
 
