@@ -67,4 +67,4 @@ zsh
 unzip
 waybar
 wayland
-wl-copy
+wl-clipboard
