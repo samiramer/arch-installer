@@ -16,6 +16,7 @@ gnome-keyring
 gnome-themes-extra
 gnupg
 grub
+hyprland
 i3lock
 imagemagick
 lazygit
@@ -64,3 +65,6 @@ xss-lock
 zip
 zsh
 unzip
+waybar
+wayland
+wl-copy
