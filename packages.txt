@@ -7,6 +7,7 @@ composer
 curl
 dex
 docker
+dolphin
 dunst
 efibootmgr
 feh
@@ -16,10 +17,13 @@ gnome-keyring
 gnome-themes-extra
 gnupg
 grub
+hypridle
 hyprland
+hyprlock
 i3lock
 imagemagick
 lazygit
+libnewt
 libnotify
 libsecret
 libx11
@@ -65,6 +69,7 @@ xss-lock
 zip
 zsh
 unzip
+uwsm
 waybar
 wayland
 wl-clipboard
