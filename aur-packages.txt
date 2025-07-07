@@ -1,5 +1,6 @@
 ddev
 google-chrome
+hyprshot
 picom-ftlabs-git
 ttf-adwaita-mono-nerd
 xautolock
